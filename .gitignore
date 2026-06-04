@@ -5,6 +5,7 @@ build/
 dist/
 wheels/
 *.egg-info
+fifa_players.csv
 
 # Virtual environments
 .venv
