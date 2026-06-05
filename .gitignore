@@ -9,3 +9,4 @@ fifa_players.csv
 
 # Virtual environments
 .venv
+.env

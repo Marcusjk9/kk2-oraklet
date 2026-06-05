@@ -27,6 +27,8 @@ async def upload_data(fil: UploadFile = File(...)) -> UploadResponse:
     innehall = await fil.read()
     if not innehall:
         raise HTTPException(status_code=400, detail="Filen är tom.")
+    if len(innehall) > 10 * 1024 * 1024:
+        raise HTTPException(status_code=400, detail="Filen är för stor (max 10 MB).")
 
     try:
         metadata = data.spara_dataset(innehall)
