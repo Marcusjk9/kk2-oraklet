@@ -6,6 +6,7 @@ Ladda upp ett CSV, ställ frågor om det, få svar från en lokal AI-modell.
 
 ```bash
 uv sync
+uv pip install torch
 uv run uvicorn app.main:app --reload
 ```
 
